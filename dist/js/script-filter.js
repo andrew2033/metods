@@ -1,8 +1,7 @@
-let filter = function(arr, callback, thisArg) {
-   let i; 
+let filter2 = function(arr, callback, thisArg) {
    let length = arr.length;
    let results = [];
-   for (i = 0; i < length; i++) {
+   for (let i = 0; i < length; i++) {
      if (callback.call(thisArg, arr[i], i, arr)) {
        results.push(arr[i]);
      }
@@ -11,8 +10,8 @@ let filter = function(arr, callback, thisArg) {
  };
 let strs = ['Andrew', '', 'Misha', 'Roma', '5', '9321'];
 
-let data = filter(strs, function(str) {
+let data = filter2(strs, function(str) {
   return str.toLowerCase() !== str;
 });
 
-console.log(data);
+console.log('filter', data);

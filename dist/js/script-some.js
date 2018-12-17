@@ -1,4 +1,4 @@
-let some = function(arr, callback, thisArg) {
+let some2 = function(arr, callback, thisArg) {
   let length = arr.length;
   for (let i = 0; i < length; i++) {
     if (callback.call(thisArg, arr[i], i, arr)) {
@@ -8,8 +8,8 @@ let some = function(arr, callback, thisArg) {
   return false;
 };
 let nums = [1, 2, 3, 4, 5];
-let dataSome = some(nums, function(num) {
+let dataSome = some2(nums, function(num) {
   return num > 3;
 });
 
-console.log(dataSome);
+console.log('some', dataSome);
